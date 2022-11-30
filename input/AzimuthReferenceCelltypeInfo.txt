@@ -1,0 +1,58 @@
+celltype.l1	celltype.l2	celltype.l3	n	id.coarse
+B	Plasmablast	Plasmablast	40	Plasmablast
+B	Plasmablast	Plasma	260	Plasmablast
+B	B naive	B naive lambda	325	B_Naive
+B	B naive	B naive kappa	575	B_Naive
+B	B memory	B memory lambda	297	B_nonNaive
+B	B memory	B memory kappa	301	B_nonNaive
+B	B intermediate	B intermediate lambda	600	B_nonNaive
+B	B intermediate	B intermediate kappa	301	B_nonNaive
+CD4 T	Treg	Treg Naive	155	Treg
+CD4 T	Treg	Treg Memory	148	Treg
+CD4 T	CD4 TEM	CD4 TEM_4	62	CD4TEM
+CD4 T	CD4 TEM	CD4 TEM_3	346	CD4TEM
+CD4 T	CD4 TEM	CD4 TEM_2	60	CD4TEM
+CD4 T	CD4 TEM	CD4 TEM_1	229	CD4TEM
+CD4 T	CD4 TCM	CD4 TCM_3	615	CD4TCM
+CD4 T	CD4 TCM	CD4 TCM_2	173	CD4TCM
+CD4 T	CD4 TCM	CD4 TCM_1	1048	CD4TCM
+CD4 T	CD4 Proliferating	CD4 Proliferating	45	CD4_Proliferating
+CD4 T	CD4 Naive	CD4 Naive	3222	CD4T_Naive
+CD4 T	CD4 CTL	CD4 CTL	296	CD4_CTL
+CD8 T	CD8 TEM	CD8 TEM_6	302	CD8T_nonNaive
+CD8 T	CD8 TEM	CD8 TEM_5	286	CD8T_nonNaive
+CD8 T	CD8 TEM	CD8 TEM_4	282	CD8T_nonNaive
+CD8 T	CD8 TEM	CD8 TEM_3	290	CD8T_nonNaive
+CD8 T	CD8 TEM	CD8 TEM_2	325	CD8T_nonNaive
+CD8 T	CD8 TEM	CD8 TEM_1	307	CD8T_nonNaive
+CD8 T	CD8 TCM	CD8 TCM_3	179	CD8T_nonNaive
+CD8 T	CD8 TCM	CD8 TCM_2	212	CD8T_nonNaive
+CD8 T	CD8 TCM	CD8 TCM_1	209	CD8T_nonNaive
+CD8 T	CD8 Proliferating	CD8 Proliferating	38	CD8T_nonNaive
+CD8 T	CD8 Naive	CD8 Naive_2	178	CD8T_Naive
+CD8 T	CD8 Naive	CD8 Naive	970	CD8T_Naive
+DC	pDC	pDC	272	pDC
+DC	cDC2	cDC2_2	303	cDC
+DC	cDC2	cDC2_1	153	cDC
+DC	cDC1	cDC1	150	cDC
+DC	ASDC	ASDC_pDC	14	pDC
+DC	ASDC	ASDC_mDC	14	cDC
+Mono	CD16 Mono	CD16 Mono	912	ncMono
+Mono	CD14 Mono	CD14 Mono	5507	cMono
+NK	NK_CD56bright	NK_CD56bright	295	NK
+NK	NK Proliferating	NK Proliferating	221	NK
+NK	NK	NK_4	125	NK
+NK	NK	NK_3	196	NK
+NK	NK	NK_2	663	NK
+NK	NK	NK_1	560	NK
+other	Platelet	Platelet	563	other
+other	ILC	ILC	132	other
+other	HSPC	HSPC	300	other
+other	Eryth	Eryth	80	other
+other T	MAIT	MAIT	603	MAIT
+other T	gdT	gdT_4	133	gdT
+other T	gdT	gdT_3	242	gdT
+other T	gdT	gdT_2	170	gdT
+other T	gdT	gdT_1	301	gdT
+other T	dnT	dnT_2	114	dnT
+other T	dnT	dnT_1	61	dnT

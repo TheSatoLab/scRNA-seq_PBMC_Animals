@@ -1,0 +1,17 @@
+FileID	Species	Stim
+1_human_S_PBL	Homo_sapiens	Mock
+1_hito	Homo_sapiens	HSV1
+6_HS_SeV	Homo_sapiens	SeV
+2_201013_Dr_Sato_HS_LPS	Homo_sapiens	LPS
+2_chimpanzee_190724_paru_PBL	Pan_troglodytes	Mock
+4_chimp_HSV	Pan_troglodytes	HSV1
+7_PT_SeV	Pan_troglodytes	SeV
+6_chimp_LPS	Pan_troglodytes	LPS
+3_akagezaru_191004_1120_PBL	Macaca_mulatta	Mock
+2_akage	Macaca_mulatta	HSV1
+8_MM_SeV	Macaca_mulatta	SeV
+4_200408_Dr_Sato_MM_LPS	Macaca_mulatta	LPS
+200221_Dr_Sato_RA_mock	Rousettus_aegyptiacus	Mock
+3_koumori	Rousettus_aegyptiacus	HSV1
+9_RA_SEB	Rousettus_aegyptiacus	SeV
+6_200408_Dr_Sato_RA_LPS	Rousettus_aegyptiacus	LPS
