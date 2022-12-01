@@ -3,7 +3,7 @@
 . ~/hd04/local/src/miniconda3/etc/profile.d/conda.sh
 conda activate R405
 
-mkdir -p ../output/Fig/Fig1
+mkdir -p ../output/Mendeley/Fig1
 
 R --vanilla --slave --args \
 ../output/Exp/Seurat/Merge/Homo_sapiens/Homo_sapiens.rds \
@@ -14,19 +14,19 @@ R --vanilla --slave --args \
 ../output/Exp/Seurat/Merge/Macaca_mulatta/Macaca_mulatta_metadata.rds \
 ../output/Exp/Seurat/Merge/Rousettus_aegyptiacus/Rousettus_aegyptiacus.rds \
 ../output/Exp/Seurat/Merge/Rousettus_aegyptiacus/Rousettus_aegyptiacus_metadata.rds \
-../output/Fig/Fig1/Fig1B.pdf \
-< Fig/Fig1/Fig1B.R
+../output/Mendeley/Fig1/Fig1B.txt \
+< Mendeley/Fig1/Fig1B.R
 
 
 R --vanilla --slave --args \
 ../output/Exp/CellLabel/FourSpecies/CellRatio.txt \
-../output/Fig/Fig1/Fig1D.pdf \
-< Fig/Fig1/Fig1D.R
+../output/Mendeley/Fig1/Fig1D.txt \
+< Mendeley/Fig1/Fig1D.R
 
 R --vanilla --slave --args \
 ../output/Exp/transcriptome/Overview/InputMatrix.rds \
 ../output/Exp/transcriptome/Overview/InputMatrixMetadata.txt \
-../output/Fig/Fig1/Fig1E.pdf \
-< Fig/Fig1/Fig1E.R
+../output/Mendeley/Fig1/Fig1E.txt \
+< Mendeley/Fig1/Fig1E.R
 
 

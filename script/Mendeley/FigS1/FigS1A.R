@@ -1,0 +1,52 @@
+#!/usr/bin/env R
+
+args <- commandArgs(T)
+library(ComplexHeatmap)
+library(amap)
+library(circlize)
+library(RColorBrewer)
+
+name_l <- c("Hs1","Hs2","Mm1","Mm2","Ra")
+data_l <- list()
+
+for (Name in name_l) {
+  data.n <- read.table(paste(args[1],Name,".txt",sep=""),header=T,row.names=1)
+  colnames(data.n) <- paste(Name,colnames(data.n),sep="__")
+  data_l[[Name]] <- log2(data.n)
+}
+data <- cbind(data_l[[1]],data_l[[2]],data_l[[3]],data_l[[4]],data_l[[5]])
+
+
+cols_Species <- brewer.pal(4, "Dark2")
+cols_Stim <- brewer.pal(6, "Set2")
+cols_ID <- brewer.pal(5, "Accent")
+cols_Dose <- brewer.pal(4, "Greys")
+
+ha <- HeatmapAnnotation(
+  ID = c(rep("Hs1",12),rep("Hs2",12),rep("Mm1",12),rep("Mm2",12),rep("Ra",12)),
+  Species = c(rep("Hs",12),rep("Hs",12),rep("Mm",12),rep("Mm",12),rep("Ra",12)),
+  Stim = factor(rep(c(rep("SeV",3),rep("HSV1",3),rep("LPS",3),rep("IFNa",3)),5),level=c("HSV1","SeV","LPS","IFNa")),
+  Dose = rep(c("0.1","1.0","10","0.1","1.0","10","20","200","2000","20","200","2000"),5),
+  col= list(
+  ID = c("Hs1" = cols_ID[1],"Hs2" = cols_ID[2],"Mm1" = cols_ID[3],"Mm2" = cols_ID[4],"Ra" = cols_ID[5]),
+  Species = c("Hs" = cols_Species[1],"Mm" = cols_Species[3],"Ra" = cols_Species[4]),
+  Stim = c("HSV1" = cols_Stim[3],"SeV" = cols_Stim[4],"LPS" = cols_Stim[5],"IFNa" = cols_Stim[6]),
+  Dose = c("0.1" = cols_Dose[2],"1.0" = cols_Dose[3],"10" = cols_Dose[4],"20" = cols_Dose[2],"200" = cols_Dose[3],"2000" = cols_Dose[4])
+  )
+)
+
+ht <- Heatmap(as.matrix(data),top_annotation = ha,
+               cluster_columns=F,
+               show_row_names=T,
+               show_column_names=F,
+               cluster_rows=F,
+               name = "log2FC",#width=unit(50,"cm"),
+               row_names_gp = gpar(fontsize=6),
+               col = colorRamp2(c(-5,0,5),c("blue","white","red")))
+
+pdf(args[2],height=3,width=10)
+draw(ht)
+dev.off()
+
+
+
