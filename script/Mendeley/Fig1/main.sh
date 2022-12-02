@@ -14,8 +14,9 @@ R --vanilla --slave --args \
 ../output/Exp/Seurat/Merge/Macaca_mulatta/Macaca_mulatta_metadata.rds \
 ../output/Exp/Seurat/Merge/Rousettus_aegyptiacus/Rousettus_aegyptiacus.rds \
 ../output/Exp/Seurat/Merge/Rousettus_aegyptiacus/Rousettus_aegyptiacus_metadata.rds \
-../output/Mendeley/Fig1/Fig1B.txt \
-< Mendeley/Fig1/Fig1B.R
+../output/Exp/Seurat/Mock/Merge_Mock.rds \
+../output/Mendeley/Fig1/Fig1BS2ABDE.txt \
+< Mendeley/Fig1/Fig1BS2ABDE.R
 
 
 R --vanilla --slave --args \

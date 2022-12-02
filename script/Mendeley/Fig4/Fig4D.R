@@ -3,7 +3,6 @@
 args <- commandArgs(trailingOnly=T)
 library(Seurat)
 library(tidyverse)
-library(ggplot2)
 
 Seurat <- readRDS(args[1])
 mt <- Seurat@meta.data
@@ -20,13 +19,6 @@ for (Stim in Stim_l) {
   ff_l[[Stim]] <- mt.ff
 }
 CellRatio <- rbind(ff_l[[1]],ff_l[[2]],ff_l[[3]],ff_l[[4]])
-
-p <- ggplot(CellRatio,aes(x=Stim, y=Freq, fill=MonoClusterID))
-p <- p + geom_bar(stat = "identity")
-p <- p + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
-
-pdf(args[2],height=4, width=4)
-print(p)
-dev.off()
+write.table(CellRatio,args[2],sep="\t",quote=F,row.names=F)
 
 

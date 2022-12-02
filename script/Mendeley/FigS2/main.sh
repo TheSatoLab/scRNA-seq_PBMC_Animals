@@ -3,8 +3,7 @@
 . ~/hd04/local/src/miniconda3/etc/profile.d/conda.sh
 conda activate R405
 
-mkdir -p ../output/Fig/FigS2
-
+mkdir -p ../output/Mendeley/FigS2
 
 ls ../output/genome/ | xargs -n 1 -P 4 bash -c \
 '
@@ -15,18 +14,20 @@ mkdir -p ../output/Exp/Seurat/Merge/${Species}
 
 R --vanilla --slave --args \
 ../output/Exp/Seurat/Merge/${Species}/${Species}.rds \
-../output/Exp/Seurat/Merge/${Species}/${Species}_integrated.rds \
 ../output/Exp/Seurat/Merge/${Species}/${Species}_metadata.rds \
-../output/Fig/FigS2/FigS2AB_${Species}.pdf \
-../output/Fig/FigS2/FigS2C_${Species}.pdf \
-< Fig/FigS2/FigS2ABC_${Species}.R
+../output/Mendeley/FigS2/FigS2C_${Species}.txt \
+< Mendeley/FigS2/FigS2C.R
 '
 
 R --vanilla --slave --args \
 ../output/Exp/Seurat/Mock/Merge_Mock.rds \
-../output/Fig/FigS2/FigS2D.pdf \
-../output/Fig/FigS2/FigS2F.pdf \
-< Fig/FigS2/FigS2DF.R
+../output/Mendeley/FigS2/FigS2F.txt \
+< Mendeley/FigS2/FigS2F.R
+
+
+
+
+
 
 R --slave --vanilla --args \
 ../output/Exp/Seurat/Mock/Merge_Mock.rds \

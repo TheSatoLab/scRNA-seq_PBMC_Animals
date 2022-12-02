@@ -16,39 +16,24 @@ R --vanilla --slave --args \
 < Mendeley/FigS3/FigS3B.R
 
 R --vanilla --slave --args \
-../output/Exp/transcriptome/tensor/GeneClassification/Common/Specificity_sort.rds \
-../output/Mendeley/FigS3/FigS3G.txt \
-< Mendeley/FigS3/FigS3G.R
-
-R --vanilla --slave --args \
-../output/Exp/transcriptome/tensor/GeneClassification/Ra/Specificity_sort.rds \
-../output/Mendeley/FigS3/FigS3H.txt \
-< Mendeley/FigS3/FigS3H.R
-
-R --vanilla --slave --args \
-../output/Exp/transcriptome/tensor/GeneClassification/Mm/Specificity_sort.rds \
-../output/Mendeley/FigS3/FigS3I.txt \
-< Mendeley/FigS3/FigS3I.R
-
-R --vanilla --slave --args \
 ../output/Exp/transcriptome/Overview/InputMatrix.rds \
 ../output/Exp/transcriptome/Overview/InputMatrixMetadata.rds \
 ../output/Exp/transcriptome/tensor/GeneClassification/Common/Specificity_sort.rds \
-../output/Mendeley/FigS3/FigS3J.txt \
-< Mendeley/FigS3/FigS3J.R
+../output/Mendeley/FigS3/FigS3GJ.txt \
+< Mendeley/FigS3/FigS3GJ.R
 
 R --vanilla --slave --args \
 ../output/Exp/transcriptome/Overview/InputMatrix.rds \
 ../output/Exp/transcriptome/Overview/InputMatrixMetadata.rds \
 ../output/Exp/transcriptome/tensor/GeneClassification/Ra/Specificity_sort.rds \
-../output/Mendeley/FigS3/FigS3K.txt \
-< Mendeley/FigS3/FigS3K.R
+../output/Mendeley/FigS3/FigS3HK.txt \
+< Mendeley/FigS3/FigS3HK.R
 
 R --vanilla --slave --args \
 ../output/Exp/transcriptome/Overview/InputMatrix.rds \
 ../output/Exp/transcriptome/Overview/InputMatrixMetadata.rds \
 ../output/Exp/transcriptome/tensor/GeneClassification/Mm/Specificity_sort.rds \
-../output/Mendeley/FigS3/FigS3L.txt \
-< Mendeley/FigS3/FigS3L.R
+../output/Mendeley/FigS3/FigS3IL.txt \
+< Mendeley/FigS3/FigS3IL.R
 
 
