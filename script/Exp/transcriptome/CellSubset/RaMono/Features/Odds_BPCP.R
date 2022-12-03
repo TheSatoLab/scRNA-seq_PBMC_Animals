@@ -49,7 +49,7 @@ for (CC in c("C5","C7")) {
   write.table(res,paste(args[6],CC,".txt",sep=""),sep="\t",quote=F)
 
   res.f <- res[res$padj <= 0.05,]
-  res.f <- res.f[res.f$oddsratio >= 1,]
+  res.f <- res.f[res.f$oddsratio >= 10,]
   res.f <- res.f[order(res.f$oddsratio,decreasing=T),]
   write.table(res.f,paste(args[7],CC,".txt",sep=""),sep="\t",quote=F)
 }
