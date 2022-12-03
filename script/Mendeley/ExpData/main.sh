@@ -61,6 +61,11 @@ ${Species} \
 < Mendeley/ExpData/integrated.R
 '
 
+R --vanilla --slave --args \
+../output/Exp/Seurat/Mock/Merge_Mock.rds \
+../output/Mendeley/ExpData/Merge_Mock.rds \
+< Mendeley/ExpData/Merge_Mock.R
+
 
 
 
