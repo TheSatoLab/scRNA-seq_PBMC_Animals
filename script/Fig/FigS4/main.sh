@@ -6,7 +6,7 @@ mkdir -p ../output/Fig/FigS4
 conda activate R405
 
 R --vanilla --slave --args \
-../output/Exp/transcriptome/multi/RaMono/CheckAllCellType/UMAP_data/ \
+../output/Exp/transcriptome/CellSubset/CheckAllCellType/UMAP_data/ \
 ../output/Fig/FigS4/FigS4A.pdf \
 < Fig/FigS4/FigS4A.R
 
