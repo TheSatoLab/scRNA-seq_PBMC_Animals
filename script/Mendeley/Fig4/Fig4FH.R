@@ -1,9 +1,7 @@
 #!/usr/bin/env R
 
 args <- commandArgs(T)
-library(ggplot2)
 library(tidyverse)
-library(cowplot)
 
 up <- read.table(args[1],header=T,sep="\t")
 down <- read.table(args[2],header=T,sep="\t")

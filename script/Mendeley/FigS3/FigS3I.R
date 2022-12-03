@@ -3,12 +3,11 @@
 args <- commandArgs(T)
 library(tidyverse)
 
-data <- readRDS(args[1])
-mt <- readRDS(args[2])
+mt <- readRDS(args[1])
 mt <- mt[,c("ID","Species","Stim","CellType")]
 rownames(mt) <- mt$ID
 
-data.ao <- readRDS(args[3])
+data.ao <- readRDS(args[2])
 data.ao <- data.ao[data.ao$Class10 != "N_A",]
 data.ao <- data.ao %>% select(-sum)
 TDIDs <- data.frame(
@@ -25,17 +24,7 @@ headers <- data.frame(
 headers <- cbind(headers,t(TDIDs))
 colnames(headers) <- colnames(data.ao)
 TD <- rbind(headers,data.ao)
-
-data.f <- data[rownames(data) %in% rownames(data.ao),]
-data.f <- as.data.frame(data.f)
-data.f$gene <- factor(rownames(data.f),level=data.ao$gene)
-data.f <- data.f[order(data.f$gene),]
-data.f <- data.f[,colnames(data.f) != "gene"]
-data.f <- rbind(t(mt),data.f)
-
-out <- cbind(TD,data.f)
-out <- out %>% select(-gene)
-write.table(out,args[4],quote=F,sep="\t",col.names=F)
+write.table(TD,args[3],quote=F,sep="\t",col.names=F)
 
 
 

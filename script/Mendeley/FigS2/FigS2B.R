@@ -20,18 +20,10 @@ for (Species in Species_l) {
   mt$ClusterID <- mt$BasicClusterID
   mt <- cbind(mt,Seurat@reductions$umap@cell.embeddings)
   mt <- mt[,c("CellID","Species","Stim","CellType","UMAP_1","UMAP_2","ClusterID","predicted.id","predicted.id.score","mapping.score")]
+  mt <- mt[mt$Stim == "Mock",]
   data_l[[sp]] <- mt
 }
 
 data <- rbind(data_l[[1]],data_l[[2]],data_l[[3]],data_l[[4]])
-
-combined <- readRDS(args[2])
-mtm <- combined@meta.data
-mtm$CellID <- paste(mtm$Species,mtm$Stim,gsub("^.._","",rownames(mtm)),sep="_")
-mtm <- cbind(mtm,combined@reductions$umap@cell.embeddings)
-mtm <- select(mtm,CellID,UMAP_1,UMAP_2,MergeCluster)
-colnames(mtm) <- c("CellID","MockMerge_UMAP_1","MockMerge_UMAP_2","MockMergeClusterID")
-
-out <- left_join(data,mtm,by="CellID")
-write.table(out,args[3],row.names=F,sep="\t",quote=F)
+write.table(data,args[2],row.names=F,sep="\t",quote=F)
 

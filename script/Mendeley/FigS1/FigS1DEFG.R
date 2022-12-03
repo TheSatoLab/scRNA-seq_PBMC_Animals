@@ -21,12 +21,17 @@ for (Species in Species_l) {
     before$Stim <- Stim
     before$CellID <- paste(sp,Stim,rownames(before),sep="_")
     data <- before[,c("CellID","Species","Stim","status","nFeature_RNA","nCount_RNA")]
+    Azimuth <- readRDS(paste(args[3],Species,"_",Stim,"_","metadata.rds",sep=""))
+    Azimuth$CellID <- paste(sp,Stim,rownames(Azimuth),sep="_")
+    Azimuth <- Azimuth[,c("CellID","predicted.celltype.l2","predicted.celltype.l2.score","mapping.score")]
+    colnames(Azimuth) <- c("CellID","predicted.celltype","predicted.score","mapping.score")
+    data <- left_join(data,Azimuth,by="CellID")
     data_l[[sp]][[Stim]] <- data
   }
   data_l[[sp]] <- rbind(data_l[[sp]][[1]],data_l[[sp]][[2]],data_l[[sp]][[3]],data_l[[sp]][[4]])
 }
 out <- rbind(data_l[[1]],data_l[[2]],data_l[[3]],data_l[[4]])
-write.table(out,args[3],sep="\t",quote=F,row.names=F)
+write.table(out,args[4],sep="\t",quote=F,row.names=F)
 
 
 
