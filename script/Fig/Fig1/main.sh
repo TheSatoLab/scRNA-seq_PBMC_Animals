@@ -24,8 +24,8 @@ R --vanilla --slave --args \
 < Fig/Fig1/Fig1D.R
 
 R --vanilla --slave --args \
-../output/Exp/transcriptome/tensor/Analysis/Overview/InputMatrix.rds \
-../output/Exp/transcriptome/tensor/Analysis/Overview/InputMatrixMetadata.txt \
+../output/Exp/transcriptome/Overview/InputMatrix.rds \
+../output/Exp/transcriptome/Overview/InputMatrixMetadata.txt \
 ../output/Fig/Fig1/Fig1E.pdf \
 < Fig/Fig1/Fig1E.R
 

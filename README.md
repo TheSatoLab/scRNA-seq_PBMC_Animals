@@ -2,7 +2,7 @@
 This is a repository of codes and input files used in the paper ([Aso et al., XXX, 2022]).
 The details of analytical pipelines are described elsewhere in the paper.
 
-As many of the viruses that have emerged in human societies originate from bat species, it is critical to understand the unique characteristics of bat immunity. To describe the differences in innate immune responses against virus infections among animal species, we analysed single-cell RNA sequencing (scRNA-seq) data of peripheral blood mononuclear cells (PBMCs) obtained from human, chimpanzee, rhesus macaque, and Egyptian fruit bat stimulated with pathogenic stimuli, including herpes simplex virus type I (HSV-1), Sendai virus (SeV), and lipopolysaccharide (LPS). 
+As many of the viruses that have emerged in human societies originate from bat species, it is critical to understand the unique characteristics of bat immunity. To describe the differences in innate immune responses against viral infections among animal species, we analysed single-cell RNA sequencing (scRNA-seq) data of peripheral blood mononuclear cells (PBMCs) obtained from human, chimpanzee, rhesus macaque, and Egyptian fruit bat stimulated with pathogenic stimuli, including herpes simplex virus type I (HSV-1), Sendai virus (SeV), and lipopolysaccharide (LPS). 
 
 
 * **input** contains input files except raw RNA-seq data (GEO: GSE218199).
