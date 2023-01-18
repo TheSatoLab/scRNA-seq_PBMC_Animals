@@ -1,7 +1,7 @@
 # Descriptions
 This directory contains programs to analyse scRNA-Seq data (GEO: GSE218199).
 
-The analytical pipeline are described in detail elsewhere ([Aso et al, XXX, 2022]).
+The analytical pipeline are described in detail elsewhere ([Aso et al, bioRxiv, 2022](https://doi.org/10.1101/2022.12.06.519403)).
 
 ## main.sh
 Main script file.
